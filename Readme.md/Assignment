@@ -1,0 +1,29 @@
+You are given a dataset that is called colombia-estate-1.csv and asked to 
+***Import the CSV file data/brasil-real-estate-1.csv into the DataFrame df1-
+import pandas as pd
+df1 = pd.read_csv('data/brasil-real-estate-1.csv')
+df1.head()
+
+
+The next question you are asked to Drop all rows with NaN values from the DataFrame df1.
+
+## When dropping rows in a dataset we use the dropna method so the answer to this querry is;
+print("df1 shape before dropping rows", df1.shape)
+df1.dropna(inplace=True)
+print("df1 shape after dropping rows" df1.shape)
+df1.head()
+## inplace=True means that we want the original DataFrame updated without making a copy. If we don't include inplace=True (or if we do include inplace=False), then pandas will revert to the default**
+
+
+
+Use the "lat-lon" column to create two separate columns in df1: "lat" and "lon". Make sure that the data type for these new columns is float.
+
+df1[["lat", "lon"]] = df1["lat-lon"].str.split(",", expand=True)
+## convert the lat and lon columns into float
+df1["lat"] = df1["lat"].astype(float)
+df1["lon"] = df1["lon"].astype(float)
+## Display the dataframe
+print(df1.dttypes)#To verify the datatypes
+print(df1.head())#To see the first few rows of the data frame.
+
+## Here, expand is telling pandas to make the DataFrame bigger; that is, to create a new column without dropping any of the ones that already exist.
