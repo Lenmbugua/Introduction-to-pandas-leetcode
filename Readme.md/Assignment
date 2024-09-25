@@ -29,3 +29,10 @@ print(df1.dttypes)#To verify the datatypes
 print(df1.head())#To see the first few rows of the data frame.
 
 ## Here, expand is telling pandas to make the DataFrame bigger; that is, to create a new column without dropping any of the ones that already exist.
+
+
+### select data
+You are given a sample data and asked to write a solution to select the name and age with the student_id 101
+Solution :
+            *** loc: It is used to filter the rows where student_id == 101, and then select only the name and age columns.
+            Data:The sample data is given as a dictionary and then converted into a pandas DataFrame.
