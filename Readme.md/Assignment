@@ -36,3 +36,14 @@ You are given a sample data and asked to write a solution to select the name and
 Solution :
             *** loc: It is used to filter the rows where student_id == 101, and then select only the name and age columns.
             Data:The sample data is given as a dictionary and then converted into a pandas DataFrame.
+
+
+### Create a new column
+
+You are given a set of data that contains the salary and name of employees and you are asked to create a new column called bonus which is the doubled salary of the employees.
+             ***   The function createBonusColumn takes a DataFrame as an argument (employees), and you need to use that within the function instead of an undefined df.
+I                  return the modified DataFrame (employees) from the function, so you can use the updated DataFrame outside the function.
+                    Explanation:
+                    Inside the function, we are multiplying the salary column by 2 to create the bonus column.
+                    The employees DataFrame is passed as an argument and modified, and the updated DataFrame is returned.
+                    This way, the DataFrame df (now called employees) is properly defined, and the function works correctly.
