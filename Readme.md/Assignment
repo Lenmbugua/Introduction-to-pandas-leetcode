@@ -55,3 +55,7 @@ you are given a set of data that contains the columns customer_id,name and email
 Write a solution to remove these duplicate rows and keep only the first occurrence. 
 so for this solution we use the drop_duplicate method to drop duplicate rows.
 The drop_duplicates(subset="email", inplace=True) removes rows where the "email" value is duplicated, keeping only the first occurrence.
+
+
+*** Drop missing data
+You can remove rows with missing values in the name column of the DataFrame using the dropna() method in pandas
